@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+    <head th:replace="fragments :: head"></head>
+
+    <body>
+    <p th:unless="${Menues} and ${menues.size()}">no cheese :(</p>
+
+
+    <table class="table">
+
+        <tr>
+            <th>Name</th>
+        </tr>
+
+        <tr th:each="menu : ${menues}">
+            <td th:text="${menu.name}"></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
