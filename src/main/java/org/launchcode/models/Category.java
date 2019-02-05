@@ -20,6 +20,11 @@ public class Category {
     private List<Cheese> cheeses = new ArrayList<>();
     public Category(){ }
 
+    @Override
+    public String toString() {
+        return (name);
+    }
+
     public Category(String name) {
         this.name = name;
     }
